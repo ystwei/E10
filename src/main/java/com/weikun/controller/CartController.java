@@ -31,7 +31,7 @@ public class CartController {
 	}	
 	@RequestMapping(value="/add/{id}/qty/{qty}")
 	public ModelAndView addCart(@PathVariable(value="id") String itemId,
-			@PathVariable(value="qty") int qty){//con£º²éÑ¯Ìõ¼ş
+			@PathVariable(value="qty") int qty){//conï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½
 		ModelAndView mv=new ModelAndView();
 		Map map=new HashMap();
 		map.put("in_itemid", itemId);
@@ -71,7 +71,7 @@ public class CartController {
 		map.put("in_olist", Arrays.toString(cart.getOlist().toArray()).replace("[", "").replace("]", "").replace(" ", ""));
 		map.put("in_qlist", Arrays.toString(cart.getQlist().toArray()).replace("[", "").replace("]", "").replace(" ", ""));
 		map.put("in_dlist", Arrays.toString(cart.getDlist().toArray()).replace("[", "").replace("]", "").replace(" ", ""));
-		
+		/*å«æ˜†*/
 		
 		map.put("f_delimiter", ",");
 
