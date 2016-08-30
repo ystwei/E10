@@ -72,7 +72,7 @@ public class CartController {
 		map.put("in_qlist", Arrays.toString(cart.getQlist().toArray()).replace("[", "").replace("]", "").replace(" ", ""));
 		map.put("in_dlist", Arrays.toString(cart.getDlist().toArray()).replace("[", "").replace("]", "").replace(" ", ""));
 		/*卫昆*/
-		/*我来了*/
+		/*我来了 */
 		
 		map.put("f_delimiter", ",");
 
