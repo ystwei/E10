@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weikun.dao.PetMapper" >
+  
+
+ <select id="selectProduct" 
+    resultMap="com.weikun.dao.ProductMapper.BaseResultMap"
+  	statementType="CALLABLE" 
+  	
+  	parameterType="java.util.Map">
+  	
+  	<![CDATA[ 
+  		  
+  		  
+  		  	call queryPet (
+  		  				  #{in_category,mode=IN,jdbcType=VARCHAR},
+  		  				  #{in_pro,mode=IN,jdbcType=VARCHAR},
+  		  				  #{in_item,mode=IN,jdbcType=VARCHAR}
+  		  				  )
+            
+  	
+  	]]>
+  
+  </select>
+  <select id="selectItem" resultMap="com.weikun.dao.ItemMapper.BaseResultMap"
+  	statementType="CALLABLE" parameterType="java.util.Map">
+  	
+  	<![CDATA[ 
+  		  
+  		  
+  		  	call queryPet (
+  		  				  #{in_category,mode=IN,jdbcType=VARCHAR},
+  		  				  #{in_pro,mode=IN,jdbcType=VARCHAR},
+  		  				  #{in_item,mode=IN,jdbcType=VARCHAR}
+  		  				  )
+            
+  	
+  	]]>
+  
+  </select>
+  
+  
+</mapper>
